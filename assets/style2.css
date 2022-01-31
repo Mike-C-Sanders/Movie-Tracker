@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+  
+font-family: fantasy;}
+.custom-title{
+background-color: tomato;}
+.footer-custome{
+    background-color: gray;
+}
+/* header {
+    -color:rgb(211,211,211);
+    display: flex;
+
+} */
+
+
+h1{
+    color:white;
+    align-self: center;
+    /* margin-left: 280px; */
+}
+
+
+.search {
+    margin: 30px;
+    margin-left: 12rem;
+    background-color:white;
+    border: 3px solid black;
+    border-radius: 50px;
+    font-size: 20px;
+    padding: 13px;
+}
+
+.search::placeholder {
+    font-family: fantasy;
+    color:black;
+    font-weight: bold;
+}
+
+
+div{
+    display: flex;
+    flex-wrap: wrap;
+}

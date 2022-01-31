@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+  }
+.myclass{
+padding:15px;
+    background-image: linear-gradient( #2c6dd5 0%, #2c6dd5 28%, #ff4b5a 91%, #ff4b5a 100%);
+  }
+  .maincls{
+background-image: url('time-best-of-culture-2019-movies.jpeg');
+  
+  
+  }
