@@ -11,18 +11,25 @@
     <body class='bg-dark'>
         <header class='header2'>
           <div class='d-flex flex-row justify-content-between'>
-            <div>
-              <h1>
+            <div class='link1'>
+             <a href='index.html'> <h2>
                 Movie Tracker
-              </h1>
+              </h2></a> 
+            </div>
+            <!-- link to page3 section -->
+            <div class='watchedlist'> 
+           <a href='index3.html'> <h4 class='text-center'> Watched list </h4> </a>  
+
             </div>
             <!-- input text field -->
             <div class='inputcustom2'>
-              <input type='text'class='input2' placeholder="Search">
+              <input class='input2' id="search" type="text" placeholder="Movies Searching" />
+
+              <!-- <input type='text'class='input2' placeholder="Search"> -->
             </div>
           </div> 
          </header>   
-         <div class='container d-flex'> 
+         <div class='container d-flex flex-wrap'> 
          <div class="card m-3" style="width: 19rem;">
             <img src="./assets/137657.jpeg" class="img-thumbnail card-img-top" alt="...">
             <div class="card-body text-center">
