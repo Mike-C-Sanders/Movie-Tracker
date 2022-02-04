@@ -53,7 +53,7 @@ padding:15px;
   }
   input:focus, textarea:focus, select:focus{
     outline: none;
-    color:yellow;
+    color:gray;
     font-weight: bold;
     font-size: 22px;
 }
@@ -65,6 +65,7 @@ h2,h4{
 color:whitesmoke;
 
 }
+
 .header2{
 background-color:black;}
 
@@ -72,10 +73,11 @@ background-color:black;}
   text-decoration: none;
 }
 .input2 {
+  margin-top: 7px;
   width:200px;
-    height: 100%;
-    background: linear-gradient(45deg, #2c6dd5 0%,gray 28%, white 91%, #ff4b5a 100%);
-   padding:24px;
+    height: 70%;
+    background-color:rbga(255,255,255,0.3);
+    padding:24px;
     border:none;
   }
   .watchedlist{
@@ -90,10 +92,14 @@ background-color:black;}
 
   }
   .input2::placeholder{
-    color:white;
+    color:red;
     font-weight: bold;
     font-size: 22px;
     }
+
+
+
+
     
 
 
