@@ -1,5 +1,5 @@
 var APIkey = '47e6015967msh57883b35319b704p1d5728jsn717c508d42e9';
-var IMDBid = 'tt4154796';
+// var IMDBid = 'tt4154796';
 
 var plotEl = $('#plot');
 var actorsEl = $('#actors');
@@ -11,8 +11,8 @@ var showModalBtn = $('.show-info-button');
 function getInfoModal(event) { 
     console.log(event.target);
 
-    // var IMDBid = event.target.getAttribute(IMDBID);
-    // console.log(IMDBid);
+    var IMDBid = event.target.getAttribute('imdbid');
+    console.log(IMDBid);
     fetch(`https://movie-database-imdb-alternative.p.rapidapi.com/?plot=short&r=json&i=${IMDBid}`, {
 	"method": "GET",
 	"headers": {
@@ -43,7 +43,8 @@ function getInfoModal(event) {
 })
 }
 
-showModalBtn.on('click',getInfoModal);
+
+cardGroup.addEventListener('click', getInfoModal);
 
 
 
