@@ -27,58 +27,68 @@
             <img src="./assets/137657.jpeg" class="img-thumbnail card-img-top" alt="...">
             <div class="card-body text-center">
               <h5 class="card-title text-danger">movie title<span class='m-3 text-dark'>Year</span></h5>
-              <button class="btn btn-danger" data-toggle="modal" data-target="#movie-results">Show more</button> 
+              <button class="btn btn-danger showinfobtn" data-toggle="modal" data-target="#movie-results">Show more</button> 
              </div>
           </div>
           <div class="card m-3" style="width: 19rem;">
             <img src="./assets/137657.jpeg" class="img-thumbnail card-img-top" alt="...">
             <div class="card-body text-center">
               <h5 class="card-title text-danger">movie title<span class='m-3 text-dark'>Year</span></h5>
-              <button class="btn btn-danger" data-toggle="modal" data-target="#movie-results">Show more</button> 
+              <button class="btn btn-danger showinfobtn" 
+              data-toggle="modal" 
+              data-target="#movie-results" 
+              id='show-modal-button'>Show more</button> 
              </div>
           </div>
           
         </div>
           <!-- Modal info -->
-          <div class="modal fade" id="movie-results" data-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal fade" id="movie-results" data-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" role='dialog'>
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="staticBackdropLabel">Movie Name</h5>
+                  <h5 class="modal-title w-100" id="staticBackdropLabel">Movie Name</h5>
                   <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <!-- movie description section -->
+                  <!-- movie description section --> 
                    <div class='text-center'> 
-                     <h5>Movie Description</h5>
-                     <p>A paragraph is a self-contained unit of discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose. Wikipedia </p></div>
+                      <h5>Plot</h5>
+                      <p id='plot'>
+                        <!-- Plot goes here -->
+                      </p>
+                    </div>
+                    <div class='text-center'> 
+                      <h5>Director</h5>
+                      <p id='director'>
+                        <!-- Director Name goes here -->
+                      </p>
+                    </div>
                      <!-- actors name section -->
                      <div>
-                       <h5 class='text-center'>Actors Name</h5>
-                       <ul class='d-flex flex-row  justify-content-center'>
-                         <li class='mx-3'>actor1  </li>
-                         <li class='mx-3'>actor1  </li>
-                         <li class='mx-3'>actor1  </li>
-                         <li class='mx-3'>actor1  </li>
-                       </ul>
+                       <h5 class='text-center'>Lead Actors</h5>                      
+                        <p id="actors" class='text-center'></p>
                      </div>
                      <!-- rating section -->
-                     <div >
-                     <p> Rating:<span style='font-weight: bold;color: blue;'> will goes here</span> </p>
+                     <div class='text-center'>
+                       <h5>Rating</h5>
+                        <p id='rating' class='text-center'> Rating:<span style='font-weight: bold;color: blue;'> will goes here</span> </p>
                      </div>
                 </div>
 
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Add watched list</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal" >Close</button>
+                  <button type="button" class="btn btn-primary" >Add to watched list</button>
                 </div>
               </div>
             </div>
           </div>
+          <p class="tester"></p>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script> 
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+  <script src="assets/modalscript.js"></script>
     </body>
 </html> 
 
