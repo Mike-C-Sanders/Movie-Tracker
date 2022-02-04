@@ -99,6 +99,7 @@ var createMovieCard = function(movie){
 
 //* Search for movie
 var searchForMovie = function(event){
+
     event.preventDefault();
     userSearch = searchReq.value;
 
