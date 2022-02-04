@@ -97,7 +97,60 @@ background-color:black;}
     font-size: 22px;
     }
 
-
+    .TheatersNY{
+      width:100px;
+      height:100%;
+      border: none;
+      color: whitesmoke;
+    }
+    .TheatersNY a{
+      text-decoration: none;
+      font-size: 10px;
+    }
+    .container-map{
+      height:100vh;
+      display: flex;
+      justify-content: center;
+    }
+    .map{
+      max-height: 80vh;
+      max-width: 800px;
+      
+    }
+  
+    .main{
+      background-color: grey;
+    }
+    .custom{
+      min-height: 10vh;
+      font-weight: bold;
+    }
+    .body{
+      background: linear-gradient(45deg, #2C6DD5 0%, #2C6DD5 28%, #FF4B5A 91%, #FF4B5A 100%)
+    }
+    #location-button{
+      background-color: #08bbe7;
+      border: none;
+      color: black;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 12px;
+      transition-duration: 0.4s;
+    }
+    #location-button:hover{
+      background-color: white; 
+    color: black;
+    }
+    .Theaterss {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      text-align: center;
+    }
 
 
     
