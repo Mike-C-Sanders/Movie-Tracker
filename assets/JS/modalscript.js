@@ -44,7 +44,7 @@ function getInfoModal(event) {
 }
 
 
-// cardGroup.addEventListener('click', getInfoModal);
+cardGroup.on('click', getInfoModal);
 
 
 
