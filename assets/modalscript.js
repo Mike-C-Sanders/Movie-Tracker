@@ -6,10 +6,13 @@ var actorsEl = $('#actors');
 var ratingEl = $('#rating');
 var movieNameEl = $('#staticBackdropLabel');
 var directorEl = $('#director');
-var showModalBtn = $('.showinfobtn');
+var showModalBtn = $('.show-info-button');
 
-function getInfoModal() { 
+function getInfoModal(event) { 
+    console.log(event.target);
 
+    // var IMDBid = event.target.getAttribute(IMDBID);
+    // console.log(IMDBid);
     fetch(`https://movie-database-imdb-alternative.p.rapidapi.com/?plot=short&r=json&i=${IMDBid}`, {
 	"method": "GET",
 	"headers": {
