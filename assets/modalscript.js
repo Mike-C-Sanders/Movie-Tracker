@@ -31,7 +31,7 @@ function getInfoModal(event) {
     var director = data.Director;
     var plot = data.Plot;
     var actors = data.Actors;
-    var rating = data.Ratings[1].Value;
+    var rating = data.Ratings[0].Value;
     console.log(plot, actors, rating);
 
 
