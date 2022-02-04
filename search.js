@@ -84,6 +84,7 @@ var createMovieCard = function(movie){
     cardButton.setAttribute('imdbid', movie.imdbID);
     cardButton.setAttribute('data-toggle', 'modal');
     cardButton.setAttribute('data-target', '#movie-results');
+   
 
     cardText.appendChild(cardTitle);
     cardText.appendChild(cardYear);
@@ -93,6 +94,7 @@ var createMovieCard = function(movie){
     cardBody.appendChild(cardText);
 
     cardGroup.appendChild(cardBody);
+    
 }
 
 //* Search for movie
