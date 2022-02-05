@@ -1,4 +1,7 @@
 var apiKey ='47e6015967msh57883b35319b704p1d5728jsn717c508d42e9';
+
+//watchlist array, will change to LocalStorage eventally.
+//hard coded in data for testing purposes
 var watchListArray = ['tt0076759', 'tt0080684', 'tt0120915' ];
 
 var cardGroup = $('#card-container');
@@ -65,7 +68,7 @@ function createCard() {
     
     cardButton.setAttribute('data-toggle', 'modal');
     cardButton.setAttribute('data-target', '#movie-results');
-
+    //append all card components together, and append to DOM
     cardGroup.append(cardBody);
     cardText.append(cardTitle);
     cardText.append(cardYear);
