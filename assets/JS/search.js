@@ -84,6 +84,7 @@ var createMovieCard = function(movie){
     cardButton.setAttribute('imdbid', movie.imdbID);
     cardButton.setAttribute('data-toggle', 'modal');
     cardButton.setAttribute('data-target', '#movie-results');
+    cardButton.addEventListener('click', getInfoModal);
    
 
     cardText.appendChild(cardTitle);
