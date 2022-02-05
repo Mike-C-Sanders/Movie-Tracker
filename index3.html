@@ -12,24 +12,26 @@
         <header class='header2'>
           <div class='d-flex flex-row justify-content-between'>
             <div class='link1'>
-         <h2 class='m-4'>
-             Watched List
+        <h2 class='m-4'>
+            Watched List
               </h2>
             </div>
             <!-- link to page3 section -->
             <div class='watchedlist'> 
-           <a href='index4.html'> <h5 class='text-center'> Find Theater Near me </h5> </a>  
+          <a href='index4.html'> <h5 class='text-center'> Find Theater Near me </h5> </a>  
 
             </div>
             <!-- input text field -->
             <div>
-              <input class='input2' id="search" type="text" placeholder="Searching" />
+              <form id="main-search-form"> <!---->
+                <input class='input2' id="search" type="text" placeholder="Searching" />
+              </form>
 
               <!-- <input type='text'class='input2' placeholder="Search"> -->
             </div>
           </div> 
-         </header>   
-         <main>
+        </header>   
+        <main>
 
         
          <div class='container d-flex flex-wrap'id='card-container'> 
@@ -91,8 +93,8 @@
                 <div class="modal-body">
                     <!-- add comment section -->
                     <div>
-                         <label for='comments'>Add Comments</label>
-               <textarea for='comments' placeholder="Add Comments"></textarea>
+                        <label for='comments'>Add Comments</label>
+              <textarea for='comments' placeholder="Add Comments"></textarea>
                     </div>
                     <hr>
                     <p>Add Raiting</p>
@@ -100,9 +102,9 @@
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="one">
                         <label class="form-check-label" for="one">
-                       1
+                      1
                         </label>
-                     
+                    
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
@@ -124,9 +126,8 @@
                         <label class="form-check-label" for="flexRadioDefault2">
 5                      </label>
                       </div>
-                   </div>
+                  </div>
                     
-
               
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -135,10 +136,11 @@
               </div>
             </div>
           </div>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script> 
+  <script src="./Assets/JS/search.js"></script>
   <script src="assets/JS/watchlistCards.js"></script>
   <script src="assets/JS/modalscript.js"></script>
     </body>
