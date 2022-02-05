@@ -35,7 +35,9 @@ function getInfoModal(event) {
         var actors = data.Actors;
         var rating = data.Ratings[0].Value;
         var movieID = data.imdbID;
+        //temporary array to store ids
         var storeIDs = [];
+        //get the local stored ids
         var findWatchListArray = localStorage.getItem('ids');
         
         //add movie data to modal
