@@ -2,7 +2,7 @@ var apiKey ='47e6015967msh57883b35319b704p1d5728jsn717c508d42e9';
 
 //watchlist array, will change to LocalStorage eventally.
 //hard coded in data for testing purposes
-var watchListArray = ['tt0076759', 'tt0080684', 'tt0120915' ];
+var watchListArray = localStorage.getItem('ids');
 
 var cardGroup = $('#card-container');
 
@@ -93,6 +93,6 @@ function createCard() {
 getWatchlist();
 
 function deleteFromList() {
-   this.parentNode.parentNode.remove();
+    this.parentNode.parentNode.remove();
 }
 

@@ -8,6 +8,8 @@ var movieNameEl = $('#staticBackdropLabel');
 var directorEl = $('#director');
 var showModalBtn = $('.show-info-button');
 var addToWatch = $('.add-to-watch-list')
+var modalEl = $('.modal');
+
 
 function getInfoModal(event) { 
     console.log(event.target);
@@ -32,6 +34,9 @@ function getInfoModal(event) {
         var plot = data.Plot;
         var actors = data.Actors;
         var rating = data.Ratings[0].Value;
+        var movieID = data.imdbID;
+        var storeIDs = [];
+        var findWatchListArray = localStorage.getItem('ids');
         
         //add movie data to modal
         movieNameEl.text(title);
@@ -40,26 +45,19 @@ function getInfoModal(event) {
         actorsEl.text(actors);
         ratingEl.text(rating);
         
-        console.log(IMDBid + 'here');
+        modalEl.on('click', addToWatch, function(){
+                if(findWatchListArray ===null){
+                    storeIDs.push(movieID);
+                    localStorage.setItem('ids', JSON.stringify(storeIDs));
+                }
+                else{
+                    storeIDs = JSON.parse(findWatchListArray);
+                    storeIDs.push(movieID);
+                    localStorage.setItem('ids', JSON.stringify(storeIDs));
+                }
+        });
+            
+    }).catch(function(error){
+        console.log(error);
     })
 }
-
-var addToWatchList = function(){
-    console.log(showModalBtn.val)
-    var movieStored = showModalBtn.prop('imdbid');
-    console.log(movieStored);
-    localStorage.setItem('ids', movieStored);
-}
-// if(addToWatch !==null){
-//     addToWatch.click(function(){
-//         console.log(IMDBid + 'here2');
-    
-//         var addToList = data.imdbID;
-//         localStorage.setItem('ids', addToList);
-//         console.log(addToList);
-//     })
-
-// }
-
-
-
