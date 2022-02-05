@@ -10,7 +10,7 @@ var showModalBtn = $('.show-info-button');
 
 function getInfoModal(event) { 
     console.log(event.target);
-
+   
     var IMDBid = event.target.getAttribute('imdbid');
     console.log(IMDBid);
     fetch(`https://movie-database-imdb-alternative.p.rapidapi.com/?plot=short&r=json&i=${IMDBid}`, {
@@ -27,6 +27,7 @@ function getInfoModal(event) {
 })
     .then(data => {
     console.log(data);
+    //save data to variables
     var title = data.Title;
     var director = data.Director;
     var plot = data.Plot;
@@ -34,17 +35,16 @@ function getInfoModal(event) {
     var rating = data.Ratings[0].Value;
     console.log(plot, actors, rating);
 
-
+    //add movie data to modal
     movieNameEl.text(title);
     directorEl.text(director);
     plotEl.text(plot);
     actorsEl.text(actors);
     ratingEl.text(rating);
+
 })
 }
 
-
-cardGroup.on('click', getInfoModal);
 
 
 

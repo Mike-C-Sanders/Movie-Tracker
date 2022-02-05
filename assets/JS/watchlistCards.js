@@ -6,6 +6,7 @@ var cardGroup = $('#card-container');
 
 function getWatchlist() {
     if (watchListArray != []) {
+        //loop through watchlist ID array, do fetch call on each ID
         for(var i=0; i<watchListArray.length; i++) {
             fetch(`https://movie-database-imdb-alternative.p.rapidapi.com/?r=json&i=${watchListArray[i]}`, {
 	"method": "GET",
@@ -20,6 +21,7 @@ function getWatchlist() {
 .then(json => {
     movie = json;
     console.log(movie);
+    //save json info to variable and call createcard function for each movie in array
     createCard();
 
 })
@@ -54,9 +56,12 @@ function createCard() {
     
     //Card Button
     var cardButton = document.createElement('button');
-    cardButton.classList.add('btn', 'btn-danger', 'show-info-button');
+    cardButton.classList.add('btn', 'btn-danger', 'show-info-button', 'm-2');
     cardButton.innerHTML = 'Show more';
-    //Set the imdb id attribute to populate modal details
+    //Delete Button
+    var delButton = document.createElement('button');
+    delButton.classList.add('btn', 'btn-danger', 'delete-button', 'm-2');
+    delButton.innerHTML = 'Delete';
     
     cardButton.setAttribute('data-toggle', 'modal');
     cardButton.setAttribute('data-target', '#movie-results');
@@ -64,7 +69,8 @@ function createCard() {
     cardGroup.append(cardBody);
     cardText.append(cardTitle);
     cardText.append(cardYear);
-    cardText.append(cardButton);  
+    cardText.append(cardButton); 
+    cardText.append(delButton);
     cardBody.append(poster);
     cardBody.append(cardText);
     
@@ -74,8 +80,16 @@ function createCard() {
     poster.src = movie.Poster;
     cardTitle.innerHTML = `${movie.Title}`
     cardYear.innerHTML = `<span class='m-3 text-dark'>${movie.Year}</span>`;
+    //Set the imdb id attribute to populate modal details
     cardButton.setAttribute('imdbid', movie.imdbID);
-
+    //button event listeners
+    cardButton.addEventListener('click', getInfoModal);
+    delButton.addEventListener('click', deleteFromList);
 }
 
 getWatchlist();
+
+function deleteFromList() {
+   this.parentNode.parentNode.remove();
+}
+
