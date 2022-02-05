@@ -22,12 +22,10 @@ var getMovieResults = function(movieSearchByUser){
         }
     })
         .then(function(response){
-            console.log(response);
             return response.json();
     })
         .then(function(json){
             myData =json;
-            console.log(json);
             console.log(myData.Search[0].imdbID);
 
             //print the movie cards to the screen
@@ -85,7 +83,7 @@ var createMovieCard = function(movie){
     cardButton.setAttribute('data-toggle', 'modal');
     cardButton.setAttribute('data-target', '#movie-results');
     cardButton.addEventListener('click', getInfoModal);
-   
+
 
     cardText.appendChild(cardTitle);
     cardText.appendChild(cardYear);
@@ -122,10 +120,10 @@ var getSearch = function(){
     //conditional to prevent the call on a page with no search.
     if(searchParam.includes('?q=')){
         var movieSearched = searchParam.split('=').pop();
-        console.log(movieSearched);
 
         getMovieResults(movieSearched);
     };
+    
 }
 
 getSearch();
