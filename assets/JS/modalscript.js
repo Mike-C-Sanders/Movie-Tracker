@@ -54,8 +54,11 @@ function getInfoModal(event) {
                 }
                 else{
                     storeIDs = JSON.parse(findWatchListArray);
-                    storeIDs.push(movieID);
-                    localStorage.setItem('ids', JSON.stringify(storeIDs));
+                    if(storeIDs.indexOf(movieID)===-1){ // -1 means not in the array, only add movies if they are not in an arry
+                        storeIDs.push(movieID);
+                        localStorage.setItem('ids', JSON.stringify(storeIDs));
+
+                    }
                 }
         });
             
