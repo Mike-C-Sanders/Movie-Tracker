@@ -1,7 +1,8 @@
 # Group Project-1: Movie trackers
-Team members: Chengchien Huang,Mike Sanders,Namees Albayati,Stone Comstock,Sonia Craciun.
-
-## Live links
+ <put live link here>
+  
+## User story
+As users, we see a page that lets anyone look for the movies from the search bar by key words, and obtaining the actual or similar movies with their years, actors, rating, and description information by recommendation. In addition, they can search the nearby theaters from where they currently are located.
 
 ## Screenshots
 ![searchBar](https://user-images.githubusercontent.com/33117688/153040706-8d95c8f2-6b60-47d6-88a0-082d760597a9.png)
@@ -10,16 +11,12 @@ Team members: Chengchien Huang,Mike Sanders,Namees Albayati,Stone Comstock,Sonia
 ![map](https://user-images.githubusercontent.com/33117688/153040985-2c7e6e73-b10e-418a-9119-d9b79a445356.png)
 
 
-
-## User story
-As users, we see a page that lets anyone look for the movies from the search bar by key words, and obtaining the actual or similar movies with their years, actors, rating, and description information by recommendation. In addition, they can search the nearby theaters from where they currently are located.
-
 ## Key topics
 1. Search engineering
 2. localstorage
 3. Google map display
 3. Movie contents display
-4. html + css + bootstrap
+4. html + css +javascript + bootstrap
 
 
 ## Techniques
@@ -33,3 +30,9 @@ As users, we see a page that lets anyone look for the movies from the search bar
 2. Openweather API
 3. Movie Database API
 
+## Team members: (alphabetically)
+1. Chengchien Huang https://github.com/Morganbb104
+2. Mike Sanders https://github.com/Mike-C-Sanders
+3. Namees Albayati https://github.com/namees-github
+4. Stone Comstock https://github.com/stone-com
+5. Sonia Craciun https://github.com/sonia8172
