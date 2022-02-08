@@ -102,7 +102,7 @@ var searchForMovie = function(event){
     event.preventDefault();
     userSearch = searchReq.value;
 
-    var queryString = `./index2.html?q=${userSearch}`;
+    var queryString = `./searchResults.html?q=${userSearch}`;
     location.assign(queryString);
 }
 
