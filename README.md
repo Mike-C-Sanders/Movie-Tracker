@@ -1,5 +1,5 @@
 # Group Project-1: Movie trackers
- <put live link here>
+ live link https://mike-c-sanders.github.io/Project-1/
   
 ## User story
 As users, we see a page that lets anyone look for the movies from the search bar by key words, and obtaining the actual or similar movies with their years, actors, rating, and description information by recommendation. In addition, they can search the nearby theaters from where they currently are located.
