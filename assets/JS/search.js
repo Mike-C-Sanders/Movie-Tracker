@@ -126,4 +126,5 @@ var getSearch = function(){
     
 }
 
+//Call get search function
 getSearch();
